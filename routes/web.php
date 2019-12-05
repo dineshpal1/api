@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get("session/get","SessionController@accessSessionData");
+Route::get("session/set","SessionController@stroeSessionData");
+Route::get("session/remove","SessionController@deleteSessionData");
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
